@@ -1,4 +1,4 @@
-local palette = require('archie.palette')
+local palette = require 'archie.palette'
 
 local archie = {}
 
