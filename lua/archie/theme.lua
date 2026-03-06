@@ -4,14 +4,6 @@ local M = {}
 
 function M.get(config)
   local p = require 'archie.palette'
-  local utils = require 'archie.utils'
-
-  -- PREMIUM BENDS & LAYERING
-  -- 1. Create the 0.3 "Glass" Selection (Muted Blue blended with background)
-  local visual_blend = utils.blend(p.blue_deep, '#1D99F3', 0.3)
-
-  -- 2. Define the "Elevated" background for Floats (Matches Lualine mid-section)
-  local float_bg = p.bg_highlight
 
   local theme = {}
   local groups = config.groups or {}
@@ -19,62 +11,64 @@ function M.get(config)
     italic = (config.disable_italics and p.none) or 'italic',
     vert_split = (config.bold_vert_split and groups.border) or p.none,
     background = (config.disable_background and p.none) or p.bg,
-    float_background = float_bg, -- Now uses the unified elevated color
+    float_background = (config.disable_float_background and p.none) or p.bg,
   }
 
   theme = {
     -- CORE UI (Transparency & Greys)
     Normal = { fg = p.fg, bg = styles.background },
-    NormalFloat = { fg = p.fg, bg = styles.float_background },
+    NormalFloat = { fg = p.blue, bg = styles.float_background },
     NormalNC = { fg = p.fg, bg = styles.background },
     CursorLine = { bg = p.bg_highlight },
     CursorLineNr = { fg = p.fg, style = 'bold' },
     LineNr = { fg = p.fg_dim },
-    FloatBorder = { fg = p.blue_deep, bg = styles.float_background },
-    FloatTitle = { fg = p.white, bg = styles.float_background, style = 'bold' },
+    FloatBorder = { fg = p.fg_dim, bg = p.none },
+    FloatTitle = { fg = p.blue, style = 'bold' },
     ColorColumn = { bg = p.bg_highlight },
     SignColumn = { fg = p.fg, bg = p.none },
     VertSplit = { fg = p.border, bg = styles.vert_split },
     Whitespace = { fg = p.fg_alt },
     NonText = { fg = p.fg_alt },
 
-    -- SELECTION & SEARCH (The Glass & Flash Logic)
-    -- Visual mode uses the subtle 0.3 blend
-    Visual = { fg = p.white, bg = visual_blend, style = 'bold' },
-    Search = { fg = p.white, bg = visual_blend },
-    -- Yank & Active Match uses the vibrant Primary Blue (#1D99F3)
+    -- SELECTION & SEARCH (The Blue Swap Logic)
+    -- Visual mode uses the muted Blue_Deep (#1B668F)
+    Visual = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    -- Search uses the same muted tone for consistency
+    Search = { fg = p.white, bg = p.blue_deep },
+    -- Yank/IncSearch uses the vibrant Flash Blue (#1D99F3)
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
     CurSearch = { link = 'IncSearch' },
     Substitute = { link = 'IncSearch' },
 
-    -- POPUP MENU & COMPLETION (Unified with Floats/Lualine)
-    Pmenu = { fg = p.fg, bg = styles.float_background },
+    -- POPUP MENU & COMPLETION (Blink.cmp/Pmenu)
+    Pmenu = { fg = p.fg, bg = p.none },
     PmenuSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
-    BlinkCmpMenu = { fg = p.fg, bg = styles.float_background },
-    BlinkCmpMenuBorder = { fg = p.blue_deep, bg = styles.float_background },
-    BlinkCmpDoc = { fg = p.fg, bg = styles.float_background },
-    BlinkCmpDocBorder = { fg = p.blue_deep, bg = styles.float_background },
+    BlinkCmpMenu = { fg = p.fg, bg = p.none },
+    BlinkCmpMenuBorder = { fg = p.blue, bg = p.none },
+    BlinkCmpDoc = { fg = p.fg, bg = p.none },
+    BlinkCmpDocBorder = { fg = p.blue, bg = p.none },
     BlinkCmpSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
 
-    -- MANAGEMENT UI (Lazy, Mason, etc. - High Contrast)
-    LazyNormal = { fg = p.fg, bg = styles.float_background },
-    LazyButton = { fg = p.white, bg = p.blue_deep },
+    -- MANAGEMENT UI (Lazy, Mason, etc.)
+    LazyNormal = { fg = p.fg, bg = p.none },
+    LazyButton = { fg = p.white, bg = p.bg_highlight },
     LazySelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
-    MasonNormal = { fg = p.fg, bg = styles.float_background },
+    MasonNormal = { fg = p.fg, bg = p.none },
     MasonHeader = { fg = p.white, bg = p.blue_deep, style = 'bold' },
     MasonHighlight = { fg = p.blue_glow },
+    MasonHighlightBlock = { fg = p.white, bg = p.blue_deep },
 
-    -- TELESCOPE (Unified with the "Elevated" look)
-    TelescopeNormal = { fg = p.fg, bg = styles.float_background },
-    TelescopeBorder = { fg = p.blue_deep, bg = styles.float_background },
-    TelescopePromptNormal = { fg = p.white, bg = styles.float_background },
-    TelescopePromptBorder = { fg = p.blue_deep, bg = styles.float_background },
+    -- TELESCOPE (High Contrast)
+    TelescopeNormal = { fg = p.fg, bg = p.none },
+    TelescopeBorder = { fg = p.blue_deep, bg = p.none },
+    TelescopePromptNormal = { fg = p.white, bg = p.none },
+    TelescopePromptBorder = { fg = p.blue_deep, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
     TelescopePromptPrefix = { fg = p.blue },
 
-    -- SYNTAX HIGHLIGHTING
+    -- SYNTAX HIGHLIGHTING (Modern Treesitter)
     Comment = { fg = p.fg_dim, style = styles.italic },
     Constant = { fg = p.orange },
     String = { fg = p.cyan },
@@ -100,13 +94,13 @@ function M.get(config)
     ['@property'] = { fg = p.blue_glow },
     ['@parameter'] = { fg = p.fg },
 
-    -- PLUGINS
-    GitSignsAdd = { fg = p.teal },
+    -- PLUGINS: Gitsigns, Noice, Saga
+    GitSignsAdd = { fg = p.green or p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
     NoiceVirtualText = { bg = p.bg_dark, fg = p.blue },
-    SagaBorder = { fg = p.blue_deep, bg = styles.float_background },
-    SagaNormal = { bg = styles.float_background },
+    SagaBorder = { fg = p.blue_deep, bg = p.none },
+    SagaNormal = { bg = p.none },
   }
 
   -- TERMINAL COLORS
