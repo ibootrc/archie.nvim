@@ -3,6 +3,7 @@ local M = {}
 
 function M.get(config)
   local p = require 'archie.palette'
+  local utils = require 'archie.utils'
 
   local theme = {}
   local groups = config.groups or {}
@@ -14,97 +15,68 @@ function M.get(config)
   }
 
   theme = {
-    -- CORE UI (Transparency & Greys)
+    -- CORE UI (The Foundation)
     Normal = { fg = p.fg, bg = styles.background },
-    NormalFloat = { fg = p.blue, bg = styles.float_background },
+    NormalFloat = { fg = p.fg, bg = styles.float_background },
     NormalNC = { fg = p.fg, bg = styles.background },
     CursorLine = { bg = p.bg_highlight },
     CursorLineNr = { fg = p.fg, style = 'bold' },
     LineNr = { fg = p.fg_dim },
-    FloatBorder = { fg = p.fg_dim, bg = p.none },
+    FloatBorder = { fg = p.blue_deep, bg = p.none }, -- Deep blue for a premium frame
     FloatTitle = { fg = p.blue, style = 'bold' },
     ColorColumn = { bg = p.bg_highlight },
     SignColumn = { fg = p.fg, bg = p.none },
     VertSplit = { fg = p.border, bg = styles.vert_split },
-    Whitespace = { fg = p.fg_alt },
-    NonText = { fg = p.fg_alt },
 
-    -- SELECTION & SEARCH (The Blue Swap Logic)
-    -- Visual mode uses the muted Blue_Deep (#1B668F)
+    -- SELECTION & SEARCH
     Visual = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    -- Search uses the same muted tone for consistency
     Search = { fg = p.white, bg = p.bg_visual },
-    -- Yank/IncSearch uses the vibrant Flash Blue (#1D99F3)
-    YankHighlight = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    IncSearch = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    CurSearch = { link = 'IncSearch' },
-    Substitute = { link = 'IncSearch' },
+    YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
+    IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
 
-    -- POPUP MENU & COMPLETION (Blink.cmp/Pmenu)
+    -- TELESCOPE (The Comprehensive Patch)
+    TelescopeNormal = { fg = p.fg, bg = p.none },
+    TelescopeBorder = { fg = p.fg_dim, bg = p.none },
+    TelescopePromptNormal = { fg = p.white, bg = p.none },
+    TelescopePromptBorder = { fg = p.blue, bg = p.none }, -- Restored blue focus
+    TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
+    TelescopeMatching = { fg = p.cyan, style = 'bold' },
+    TelescopePromptPrefix = { fg = p.blue, style = 'bold' },
+
+    -- METADATA GROUPS (Restores the Detail Colors)
+    TelescopeResultsDirectory = { fg = p.blue, style = 'bold' },
+    TelescopeResultsIdentifier = { fg = p.purple }, -- Permissions
+    TelescopeResultsNumber = { fg = p.orange }, -- File Size
+    TelescopeResultsComment = { fg = p.fg_dim }, -- Dates
+
+    -- EXTENSION LINKS (Ensures extensions like file-browser use these colors)
+    FileBrowserDirectory = { link = 'TelescopeResultsDirectory' },
+    FileBrowserPermission = { link = 'TelescopeResultsIdentifier' },
+    FileBrowserSize = { link = 'TelescopeResultsNumber' },
+    FileBrowserDate = { link = 'TelescopeResultsComment' },
+
+    -- COMPLETION (Unified)
     Pmenu = { fg = p.fg, bg = p.none },
     PmenuSel = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     BlinkCmpMenu = { fg = p.fg, bg = p.none },
     BlinkCmpMenuBorder = { fg = p.blue, bg = p.none },
-    BlinkCmpDoc = { fg = p.fg, bg = p.none },
-    BlinkCmpDocBorder = { fg = p.blue, bg = p.none },
-    BlinkCmpSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    BlinkCmpSel = { fg = p.white, bg = p.bg_visual, style = 'bold' },
 
-    -- MANAGEMENT UI (Lazy, Mason, etc.)
-    LazyNormal = { fg = p.fg, bg = p.none },
-    LazyButton = { fg = p.white, bg = p.bg_highlight },
-    LazySelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    MasonNormal = { fg = p.fg, bg = p.none },
-    MasonHeader = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
-    MasonHighlight = { fg = p.blue_glow },
-    MasonHighlightBlock = { fg = p.white, bg = p.bg_visual },
-
-    -- TELESCOPE
-    TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.fg_dim, bg = p.none }, -- Muted border for better focus
-    TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.blue_deep, bg = p.none }, -- Blue border when typing
-    TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    TelescopeMatching = { fg = p.cyan, style = 'bold' }, -- High visibility matches
-    TelescopePromptPrefix = { fg = p.blue, style = 'bold' },
-
-    -- TELESCOPE FILE DETAILS (The Fix)
-    TelescopeResultsDirectory = { fg = p.blue_deep, style = 'bold' }, -- Directories: Blue
-    TelescopeResultsIdentifier = { fg = p.purple }, -- Permissions: Purple
-    TelescopeResultsNumber = { fg = p.orange }, -- Sizes: Orange
-    TelescopeResultsComment = { fg = p.fg_dim }, -- Dates: Faint Grey
-    TelescopeResultsVariable = { fg = p.white }, -- Main Filename
-
-    -- SYNTAX HIGHLIGHTING (Modern Treesitter)
+    -- SYNTAX (Consistent Accent Use)
     Comment = { fg = p.fg_dim, style = styles.italic },
     Constant = { fg = p.orange },
     String = { fg = p.cyan },
-    Character = { fg = p.pink },
-    Number = { fg = p.orange },
-    Boolean = { fg = p.orange },
-    Float = { fg = p.orange },
-    Identifier = { fg = p.fg },
     Function = { fg = p.blue_glow },
-    Statement = { fg = p.purple },
-    Conditional = { fg = p.purple },
-    Repeat = { fg = p.purple },
-    Label = { fg = p.blue },
-    Operator = { fg = p.blue_glow },
     Keyword = { fg = p.pink },
-    Exception = { fg = p.red },
+    Statement = { fg = p.purple },
     Type = { fg = p.teal },
-    Special = { fg = p.blue_glow },
-    Delimiter = { fg = p.fg_dim },
     ['@variable'] = { fg = p.fg },
-    ['@function'] = { link = 'Function' },
-    ['@keyword'] = { link = 'Keyword' },
-    ['@property'] = { fg = p.blue_glow },
-    ['@parameter'] = { fg = p.fg },
 
-    -- PLUGINS: Gitsigns, Noice, Saga
+    -- PLUGINS
     GitSignsAdd = { fg = p.green or p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.white },
+    NoiceVirtualText = { bg = p.bg_dark, fg = p.blue },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
     SagaNormal = { bg = p.none },
   }
