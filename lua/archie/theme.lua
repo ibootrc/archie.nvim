@@ -32,18 +32,18 @@ function M.get(config)
 
     -- SELECTION & SEARCH (The Blue Swap Logic)
     -- Visual mode uses the muted Blue_Deep (#1B668F)
-    Visual = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    Visual = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     -- Search uses the same muted tone for consistency
-    Search = { fg = p.white, bg = p.blue_deep },
+    Search = { fg = p.white, bg = p.bg_visual },
     -- Yank/IncSearch uses the vibrant Flash Blue (#1D99F3)
-    YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
-    IncSearch = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    YankHighlight = { fg = p.white, bg = p.bg_visual, style = 'bold' },
+    IncSearch = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     CurSearch = { link = 'IncSearch' },
     Substitute = { link = 'IncSearch' },
 
     -- POPUP MENU & COMPLETION (Blink.cmp/Pmenu)
     Pmenu = { fg = p.fg, bg = p.none },
-    PmenuSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    PmenuSel = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     BlinkCmpMenu = { fg = p.fg, bg = p.none },
     BlinkCmpMenuBorder = { fg = p.blue, bg = p.none },
     BlinkCmpDoc = { fg = p.fg, bg = p.none },
