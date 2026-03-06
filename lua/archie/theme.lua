@@ -30,7 +30,7 @@ function M.get(config)
 
     -- SELECTION & SEARCH
     Visual = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    Search = { fg = p.white, bg = p.bg_visual },
+    Search = { fg = p.fg, bg = p.bg_visual },
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
 
