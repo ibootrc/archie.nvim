@@ -8,7 +8,7 @@ function M.get(config)
 
   -- PREMIUM BENDS & LAYERING
   -- 1. Create the 0.3 "Glass" Selection (Muted Blue blended with background)
-  local visual_blend = utils.blend(p.blue_deep, '#000000', 0.3)
+  local visual_blend = utils.blend(p.blue_deep, '#1D99F3', 0.3)
 
   -- 2. Define the "Elevated" background for Floats (Matches Lualine mid-section)
   local float_bg = p.bg_highlight
