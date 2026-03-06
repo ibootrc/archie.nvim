@@ -98,7 +98,7 @@ function M.get(config)
     GitSignsAdd = { fg = p.green or p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
-    NoiceVirtualText = { bg = p.bg_dark, fg = p.blue },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.blue },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
     SagaNormal = { bg = p.none },
   }
