@@ -33,6 +33,9 @@ function M.get(config)
     Search = { fg = p.white, bg = p.bg_visual },
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
+    -- THE FIX FOR THE YELLOW HIGHLIGHT:
+    Substitute = { link = 'IncSearch' }, -- Forces first match to Blue
+    CurSearch = { link = 'IncSearch' }, -- Modern Neovim 'Current Search'
 
     -- TELESCOPE & PLUGINS
     TelescopeNormal = { fg = p.fg, bg = p.none },
