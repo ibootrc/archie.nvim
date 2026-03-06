@@ -37,7 +37,7 @@ function M.get(config)
     Search = { fg = p.white, bg = p.blue_deep },
     -- Yank/IncSearch uses the vibrant Flash Blue (#1D99F3)
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
-    IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
+    IncSearch = { fg = p.white, bg = p.blue_deep, style = 'bold' },
     CurSearch = { link = 'IncSearch' },
     Substitute = { link = 'IncSearch' },
 
