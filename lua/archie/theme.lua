@@ -33,9 +33,6 @@ function M.get(config)
     Search = { fg = p.white, bg = p.bg_visual },
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
-    -- THE FIX FOR THE YELLOW HIGHLIGHT:
-    Substitute = { link = 'IncSearch' }, -- Forces first match to Blue
-    CurSearch = { link = 'IncSearch' }, -- Modern Neovim 'Current Search'
 
     -- TELESCOPE & PLUGINS
     TelescopeNormal = { fg = p.fg, bg = p.none },
@@ -85,7 +82,7 @@ function M.get(config)
     GitSignsAdd = { fg = p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.white },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
   }
 
