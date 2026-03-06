@@ -15,64 +15,61 @@ function M.get(config)
   }
 
   theme = {
-    -- Core UI (Refined with Overrides)
-    ColorColumn = { bg = p.bg_highlight },
-    Conceal = { bg = p.none },
-    CurSearch = { bg = p.blue_deep, fg = p.none },
-    Cursor = { fg = p.bg_dark, bg = p.blue_glow },
-    CursorColumn = { bg = p.bg_highlight },
-    CursorLine = { bg = p.grey },
-    CursorLineNr = { fg = p.fg, style = 'bold' },
-    DarkenedPanel = { bg = p.bg_dark },
-    DarkenedStatusline = { bg = p.bg_dark },
-    DiffAdd = { bg = blend(p.teal, p.bg_dark, 0.2) },
-    DiffChange = { bg = p.bg_highlight },
-    DiffDelete = { bg = blend(p.red, p.bg_dark, 0.2) },
-    DiffText = { bg = blend(p.blue, p.bg_dark, 0.2) },
-    diffAdded = { link = 'DiffAdd' },
-    diffChanged = { link = 'DiffChange' },
-    diffRemoved = { link = 'DiffDelete' },
-    Directory = { fg = p.blue, bg = p.none },
-    ErrorMsg = { fg = p.red, style = 'bold' },
-    FloatBorder = { fg = p.fg_dim, bg = p.none },
-    FloatTitle = { fg = p.blue, style = 'bold' },
-    FoldColumn = { fg = p.fg_dim },
-    Folded = { fg = p.fg, bg = p.bg_dark },
-    IncSearch = { bg = p.blue_deep, fg = p.none },
-    LineNr = { fg = p.fg_dim },
-    MatchParen = { fg = p.white, bg = p.fg_dim },
-    ModeMsg = { fg = p.blue },
-    MoreMsg = { fg = p.blue },
-    NonText = { fg = p.fg_alt },
+    -- CORE UI (Transparency & Greys)
     Normal = { fg = p.fg, bg = styles.background },
     NormalFloat = { fg = p.blue, bg = styles.float_background },
     NormalNC = { fg = p.fg, bg = styles.background },
-    NvimInternalError = { fg = p.white, bg = p.red },
-    Pmenu = { fg = p.white, bg = p.none },
-    PmenuSbar = { bg = p.none },
-    PmenuSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
-    PmenuThumb = { bg = p.none },
-    Question = { fg = p.yellow },
-    Search = { bg = p.blue_deep, fg = p.none },
-    SpecialKey = { fg = p.cyan },
-    SpellBad = { sp = p.red, style = 'undercurl' },
-    SpellCap = { sp = p.blue, style = 'undercurl' },
-    SpellLocal = { sp = p.yellow, style = 'undercurl' },
-    SpellRare = { sp = p.blue, style = 'undercurl' },
+    CursorLine = { bg = p.bg_highlight },
+    CursorLineNr = { fg = p.fg, style = 'bold' },
+    LineNr = { fg = p.fg_dim },
+    FloatBorder = { fg = p.fg_dim, bg = p.none },
+    FloatTitle = { fg = p.blue, style = 'bold' },
+    ColorColumn = { bg = p.bg_highlight },
     SignColumn = { fg = p.fg, bg = p.none },
-    StatusLine = { fg = p.blue, bg = p.bg_dark },
-    StatusLineNC = { fg = p.fg_dim, bg = p.bg_dark },
-    TabLine = { fg = p.fg_dim, bg = p.bg_dark },
-    TabLineFill = { bg = p.bg_dark },
-    TabLineSel = { fg = p.fg, bg = p.bg_highlight },
-    Title = { fg = p.fg, style = 'bold' },
     VertSplit = { fg = p.border, bg = styles.vert_split },
-    Visual = { bg = p.bg_visual },
-    WarningMsg = { fg = p.yellow },
     Whitespace = { fg = p.fg_alt },
-    WildMenu = { link = 'IncSearch' },
+    NonText = { fg = p.fg_alt },
 
-    -- Syntax (Harmonized)
+    -- SELECTION & SEARCH (The Blue Swap Logic)
+    -- Visual mode uses the muted Blue_Deep (#1B668F)
+    Visual = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    -- Search uses the same muted tone for consistency
+    Search = { fg = p.white, bg = p.blue_deep },
+    -- Yank/IncSearch uses the vibrant Flash Blue (#1D99F3)
+    YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
+    IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
+    CurSearch = { link = 'IncSearch' },
+    Substitute = { link = 'IncSearch' },
+
+    -- POPUP MENU & COMPLETION (Blink.cmp/Pmenu)
+    Pmenu = { fg = p.fg, bg = p.none },
+    PmenuSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    BlinkCmpMenu = { fg = p.fg, bg = p.none },
+    BlinkCmpMenuBorder = { fg = p.blue, bg = p.none },
+    BlinkCmpDoc = { fg = p.fg, bg = p.none },
+    BlinkCmpDocBorder = { fg = p.blue, bg = p.none },
+    BlinkCmpSel = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+
+    -- MANAGEMENT UI (Lazy, Mason, etc.)
+    LazyNormal = { fg = p.fg, bg = p.none },
+    LazyButton = { fg = p.white, bg = p.bg_highlight },
+    LazySelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    MasonNormal = { fg = p.fg, bg = p.none },
+    MasonHeader = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    MasonHighlight = { fg = p.blue_glow },
+    MasonHighlightBlock = { fg = p.white, bg = p.blue_deep },
+
+    -- TELESCOPE (High Contrast)
+    TelescopeNormal = { fg = p.fg, bg = p.none },
+    TelescopeBorder = { fg = p.blue_deep, bg = p.none },
+    TelescopePromptNormal = { fg = p.white, bg = p.none },
+    TelescopePromptBorder = { fg = p.blue_deep, bg = p.none },
+    TelescopeSelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    TelescopeMatching = { fg = p.cyan, style = 'bold' },
+    TelescopePromptPrefix = { fg = p.blue },
+
+    -- SYNTAX HIGHLIGHTING (Modern Treesitter)
+    Comment = { fg = p.fg_dim, style = styles.italic },
     Constant = { fg = p.orange },
     String = { fg = p.cyan },
     Character = { fg = p.pink },
@@ -88,80 +85,25 @@ function M.get(config)
     Operator = { fg = p.blue_glow },
     Keyword = { fg = p.pink },
     Exception = { fg = p.red },
-    PreProc = { fg = p.purple },
-    Include = { fg = p.blue },
     Type = { fg = p.teal },
     Special = { fg = p.blue_glow },
     Delimiter = { fg = p.fg_dim },
-    Comment = { fg = p.fg_dim, style = styles.italic },
-    Underlined = { style = 'underline' },
-    Bold = { style = 'bold' },
-    Italic = { style = 'italic' },
-    Error = { fg = p.red },
-    Todo = { bg = p.yellow, fg = p.bg_dark, style = 'bold' },
-
-    -- Treesitter (Modernized)
     ['@variable'] = { fg = p.fg },
-    ['@variable.builtin'] = { fg = p.blue_glow },
-    ['@constant.builtin'] = { fg = p.orange },
-    ['@constructor'] = { fg = p.teal },
     ['@function'] = { link = 'Function' },
-    ['@function.builtin'] = { fg = p.blue_glow },
-    ['@function.call'] = { fg = p.blue },
     ['@keyword'] = { link = 'Keyword' },
-    ['@keyword.function'] = { fg = p.pink },
-    ['@keyword.operator'] = { fg = p.purple },
-    ['@keyword.return'] = { fg = p.pink },
-    ['@method'] = { fg = p.blue_glow },
     ['@property'] = { fg = p.blue_glow },
     ['@parameter'] = { fg = p.fg },
-    ['@punctuation.bracket'] = { fg = p.fg },
-    ['@punctuation.delimiter'] = { fg = p.blue },
-    ['@string'] = { link = 'String' },
-    ['@tag'] = { fg = p.teal },
-    ['@tag.attribute'] = { fg = p.purple, style = styles.italic },
-    ['@type'] = { link = 'Type' },
 
-    -- Plugins: Blink.cmp & Cmp
-    BlinkCmpMenu = { fg = p.white, bg = p.none },
-    BlinkCmpMenuBorder = { fg = p.blue, bg = p.none },
-    BlinkCmpDoc = { fg = p.white, bg = p.none },
-    BlinkCmpDocBorder = { fg = p.blue, bg = p.none },
-    BlinkCmpSel = { fg = p.blue, bg = p.bg_visual, style = 'bold' },
-    CmpItemAbbrMatch = { fg = p.blue, style = 'bold' },
-    CmpItemKind = { fg = p.pink },
-
-    -- Plugins: Telescope
-    TelescopeNormal = { fg = p.fg, bg = p.none }, -- Main text in the results
-    TelescopePromptNormal = { fg = p.white, bg = p.none }, -- Text you are typing
-    TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' }, -- The active line
-    TelescopeMatching = { fg = p.cyan, style = 'bold' }, -- The characters that match your search
-    TelescopeSelectionCaret = { fg = p.blue },
-    TelescopePromptPrefix = { fg = p.blue },
-
-    -- Plugins: Gitsigns
-    GitSignsAdd = { fg = p.teal },
+    -- PLUGINS: Gitsigns, Noice, Saga
+    GitSignsAdd = { fg = p.green or p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
-
-    -- Plugins: NvimTree
-    NvimTreeFolderName = { fg = p.blue },
-    NvimTreeOpenedFolderName = { fg = p.blue_glow, style = 'bold' },
-    NvimTreeRootFolder = { fg = p.purple, style = 'bold' },
-    NvimTreeGitDirty = { fg = p.yellow },
-    NvimTreeGitNew = { fg = p.teal },
-    NvimTreeGitDeleted = { fg = p.red },
-
-    -- Plugins: LspSaga
+    NoiceVirtualText = { bg = p.bg_dark, fg = p.blue },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
     SagaNormal = { bg = p.none },
-    CodeActionText = { fg = p.yellow },
-
-    -- Plugins: Noice
-    NoiceVirtualText = { bg = p.bg_dark, fg = p.blue },
   }
 
-  -- Terminal
+  -- TERMINAL COLORS
   vim.g.terminal_color_0 = p.bg_dark
   vim.g.terminal_color_1 = p.red
   vim.g.terminal_color_2 = p.teal
