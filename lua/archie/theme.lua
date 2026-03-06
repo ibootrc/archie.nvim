@@ -34,22 +34,13 @@ function M.get(config)
     YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
 
-    -- TELESCOPE (The Comprehensive Patch)
     TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.fg_dim, bg = p.none },
+    TelescopeBorder = { fg = p.fg, bg = p.none },
     TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.blue, bg = p.none }, -- Restored blue focus
+    TelescopePromptBorder = { fg = p.fg, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    TelescopeMatching = { fg = p.cyan, style = 'bold' },
-    TelescopePromptPrefix = { fg = p.blue, style = 'bold' },
-
-    -- METADATA GROUPS (Restores the Detail Colors)
-    TelescopeResultsDirectory = { fg = p.blue, style = 'bold' },
-    TelescopeResultsIdentifier = { fg = p.purple }, -- Permissions
-    TelescopeResultsNumber = { fg = p.orange }, -- File Size
-    TelescopeResultsComment = { fg = p.fg_dim }, -- Dates
-
-    -- EXTENSION LINKS (Ensures extensions like file-browser use these colors)
+    TelescopeMatching = { fg = p.blue_deep, style = 'bold' },
+    TelescopePromptPrefix = { fg = p.blue_deep, style = 'bold' }, -- EXTENSION LINKS (Ensures extensions like file-browser use these colors)
     FileBrowserDirectory = { link = 'TelescopeResultsDirectory' },
     FileBrowserPermission = { link = 'TelescopeResultsIdentifier' },
     FileBrowserSize = { link = 'TelescopeResultsNumber' },
