@@ -1,3 +1,4 @@
+local blend = require('archie.utils').blend
 local M = {}
 
 function M.get(config)
@@ -51,18 +52,18 @@ function M.get(config)
     -- MANAGEMENT UI (Lazy, Mason, etc.)
     LazyNormal = { fg = p.fg, bg = p.none },
     LazyButton = { fg = p.white, bg = p.bg_highlight },
-    LazySelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    LazySelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     MasonNormal = { fg = p.fg, bg = p.none },
-    MasonHeader = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    MasonHeader = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
     MasonHighlight = { fg = p.blue_glow },
-    MasonHighlightBlock = { fg = p.white, bg = p.blue_deep },
+    MasonHighlightBlock = { fg = p.white, bg = p.bg_visual },
 
     -- TELESCOPE (High Contrast)
     TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.blue_deep, bg = p.none },
+    TelescopeBorder = { fg = p.bg_highlight, bg = p.none },
     TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.blue_deep, bg = p.none },
-    TelescopeSelection = { fg = p.white, bg = p.blue_deep, style = 'bold' },
+    TelescopePromptBorder = { fg = p.bg_highlight, bg = p.none },
+    TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
     TelescopePromptPrefix = { fg = p.blue },
 
