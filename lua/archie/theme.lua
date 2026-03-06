@@ -60,9 +60,9 @@ function M.get(config)
 
     -- TELESCOPE (High Contrast)
     TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.bg_highlight, bg = p.none },
+    TelescopeBorder = { fg = p.bg_dark, bg = p.none },
     TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.bg_highlight, bg = p.none },
+    TelescopePromptBorder = { fg = p.bg_dark, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
     TelescopePromptPrefix = { fg = p.blue },
@@ -97,7 +97,7 @@ function M.get(config)
     GitSignsAdd = { fg = p.green or p.teal },
     GitSignsChange = { fg = p.yellow },
     GitSignsDelete = { fg = p.red },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.blue },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.white },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
     SagaNormal = { bg = p.none },
   }
