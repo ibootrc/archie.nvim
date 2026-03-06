@@ -58,14 +58,21 @@ function M.get(config)
     MasonHighlight = { fg = p.blue_glow },
     MasonHighlightBlock = { fg = p.white, bg = p.bg_visual },
 
-    -- TELESCOPE (High Contrast)
+    -- TELESCOPE
     TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.fg, bg = p.none },
+    TelescopeBorder = { fg = p.fg_dim, bg = p.none }, -- Muted border for better focus
     TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.fg, bg = p.none },
+    TelescopePromptBorder = { fg = p.blue_deep, bg = p.none }, -- Blue border when typing
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    TelescopeMatching = { fg = p.blue_deep, style = 'bold' },
-    TelescopePromptPrefix = { fg = p.blue_deep, style = 'bold' },
+    TelescopeMatching = { fg = p.cyan, style = 'bold' }, -- High visibility matches
+    TelescopePromptPrefix = { fg = p.blue, style = 'bold' },
+
+    -- TELESCOPE FILE DETAILS (The Fix)
+    TelescopeResultsDirectory = { fg = p.blue_deep, style = 'bold' }, -- Directories: Blue
+    TelescopeResultsIdentifier = { fg = p.purple }, -- Permissions: Purple
+    TelescopeResultsNumber = { fg = p.orange }, -- Sizes: Orange
+    TelescopeResultsComment = { fg = p.fg_dim }, -- Dates: Faint Grey
+    TelescopeResultsVariable = { fg = p.white }, -- Main Filename
 
     -- SYNTAX HIGHLIGHTING (Modern Treesitter)
     Comment = { fg = p.fg_dim, style = styles.italic },
