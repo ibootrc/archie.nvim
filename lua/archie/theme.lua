@@ -1,5 +1,3 @@
-local blend = require('archie.utils').blend
-
 local M = {}
 
 function M.get(config)
