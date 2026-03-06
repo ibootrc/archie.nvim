@@ -65,7 +65,7 @@ function M.get(config)
     TelescopePromptBorder = { fg = p.fg, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     TelescopeMatching = { fg = p.blue_deep, style = 'bold' },
-    TelescopePromptPrefix = { fg = p.blue },
+    TelescopePromptPrefix = { fg = p.blue_deep, style = 'bold' },
 
     -- SYNTAX HIGHLIGHTING (Modern Treesitter)
     Comment = { fg = p.fg_dim, style = styles.italic },
