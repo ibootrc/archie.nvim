@@ -60,9 +60,9 @@ function M.get(config)
 
     -- TELESCOPE (High Contrast)
     TelescopeNormal = { fg = p.fg, bg = p.none },
-    TelescopeBorder = { fg = p.bg_dark, bg = p.none },
+    TelescopeBorder = { fg = p.fg, bg = p.none },
     TelescopePromptNormal = { fg = p.white, bg = p.none },
-    TelescopePromptBorder = { fg = p.bg_dark, bg = p.none },
+    TelescopePromptBorder = { fg = p.fg, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
     TelescopePromptPrefix = { fg = p.blue },
