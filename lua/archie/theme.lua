@@ -132,10 +132,12 @@ function M.get(config)
     CmpItemKind = { fg = p.pink },
 
     -- Plugins: Telescope
-    TelescopeNormal = { link = 'NormalFloat' },
-    TelescopeBorder = { fg = p.blue_deep },
-    TelescopeSelection = { bg = p.bg_visual, fg = p.blue },
-    TelescopeMatching = { fg = p.cyan, style = 'bold' },
+    TelescopeNormal = { fg = p.fg, bg = p.none }, -- Main text in the results
+    TelescopePromptNormal = { fg = p.white, bg = p.none }, -- Text you are typing
+    TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' }, -- The active line
+    TelescopeMatching = { fg = p.cyan, style = 'bold' }, -- The characters that match your search
+    TelescopeSelectionCaret = { fg = p.blue },
+    TelescopePromptPrefix = { fg = p.blue },
 
     -- Plugins: Gitsigns
     GitSignsAdd = { fg = p.teal },
