@@ -89,7 +89,7 @@ function M.get(config)
 
     -- LAZY.NVIM UI OVERRIDES
     LazyNormal = { fg = p.fg, bg = p.none }, -- Main window bg
-    LazyBorder = { fg = p.fg, bg = p.none }, -- Use your balanced blue
+    LazyBorder = { fg = p.fg, bg = p.none },
     LazyTitle = { fg = p.white, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
     LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
@@ -106,6 +106,7 @@ function M.get(config)
     LazyProgressDone = { fg = p.white, style = 'bold' },
     LazyProgressTodo = { fg = p.white },
     LazyProp = { fg = p.white },
+    LazyComment = { fg = p.white },
     LazySpecial = { fg = p.white },
   }
 
