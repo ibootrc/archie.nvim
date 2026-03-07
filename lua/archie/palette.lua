@@ -8,7 +8,7 @@ local M = {
   bg_dark = bg_base, -- For Noice/Statusline
   bg_panel = '#2a2e32', -- Slightly lighter for floating windows
   bg_visual = '#11405A', -- Your specific override
-  blue_flash = '#6B9CB5',
+  blue_flash = '#0D3246',
   bg_highlight = '#34393e', -- For CursorLine (subtle)
 
   -- The Greys (Text & UI)
