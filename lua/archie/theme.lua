@@ -68,6 +68,7 @@ function M.get(config)
     ['@field'] = { fg = p.blue_glow },
     ['@constructor'] = { fg = p.blue_deep, style = 'bold' },
     ['@keyword.return'] = { fg = p.pink, style = 'bold' },
+    ['@variable.member'] = { fg = p.blue_deep, style = 'bold' },
 
     -- COMPLETION, GITSIGNS, ETC.
     Pmenu = { fg = p.fg, bg = p.none },
