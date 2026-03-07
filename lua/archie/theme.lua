@@ -86,14 +86,14 @@ function M.get(config)
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
-    NoiceFormatKind = { fg = p.fg_dim },
+    NoiceFormatKind = { fg = p.fg_dim, bg = p.bg_float },
     -- test
     NoiceFormatLevelInfo = { fg = p.blue, bg = p.none },
     NoiceFormatLevelWarn = { fg = p.yellow, bg = p.none },
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
 
     -- LAZY.NVIM UI OVERRIDES
-    LazyNormal = { fg = p.fg, bg = p.bg_noice }, -- Main window bg
+    LazyNormal = { fg = p.fg, bg = p.bg_float }, -- Main window bg
     --LazyBorder = { fg = p.fg, bg = p.none },
     --LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
@@ -110,7 +110,7 @@ function M.get(config)
     LazyProgressDone = { fg = p.orange, style = 'bold' },
     LazyProgressTodo = { fg = p.orange },
     LazyProp = { fg = p.white },
-    LazyComment = { fg = '#87757C' },
+    LazyComment = { fg = fg_dim },
     -- The "ghost" parameters for Lazy's virtual text info
     NonText = { fg = p.orange }, -- Lazy uses this for "Already up to date"
     Conceal = { fg = p.white, bg = p.none }, -- If it's being hidden/replaced
