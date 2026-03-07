@@ -88,9 +88,10 @@ function M.get(config)
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
     NoiceFormatKind = { fg = p.fg_dim, bg = p.none },
     -- test
-    NoiceFormatLevelInfo = { fg = p.fg_dim, bg = p.none },
     NoiceFormatLevelWarn = { fg = p.yellow, bg = p.none },
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
+    NoiceFormatMessage = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
+    NoiceFormatLevelInfo = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
 
     -- LAZY.NVIM: GLASS UI REWRITE
     LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
