@@ -94,7 +94,7 @@ function M.get(config)
     -- Buttons & Selection
     LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
     LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
-    LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
+    --LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
     -- Status Icons & Text
     LazyDir = { fg = p.cyan },
     LazyUrl = { fg = p.blue_glow },
@@ -107,6 +107,10 @@ function M.get(config)
     LazyProgressTodo = { fg = p.orange },
     LazyProp = { fg = p.white },
     LazyComment = { fg = '#87757C' },
+    -- The "ghost" parameters for Lazy's virtual text info
+    LazyNoice = { fg = '#87757C' }, -- Only if noice integration is active
+    NonText = { fg = p.orange }, -- Lazy uses this for "Already up to date"
+    Conceal = { fg = p.white, bg = p.none }, -- If it's being hidden/replaced
   }
 
   -- TERMINAL COLORS
