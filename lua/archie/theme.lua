@@ -29,13 +29,13 @@ function M.get(config)
     VertSplit = { fg = p.border, bg = styles.vert_split },
 
     -- SELECTION & SEARCH
-    Visual = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    Search = { fg = p.fg, bg = p.bg_visual },
-    YankHighlight = { fg = p.white, bg = p.blue, style = 'bold' },
-    IncSearch = { fg = p.white, bg = p.blue, style = 'bold' },
+    Visual = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
+    Search = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
+    YankHighlight = { fg = p.fg, bg = p.blue, style = 'bold' },
+    IncSearch = { fg = p.fg, bg = p.blue, style = 'bold' },
 
     -- TELESCOPE & PLUGINS
-    TelescopeNormal = { fg = p.fg, bg = p.none },
+    TelescopeNormal = { fg = p.fg, bg = p.none, style = 'bold' },
     TelescopeBorder = { fg = p.fg, bg = p.none },
     TelescopeSelection = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
@@ -46,11 +46,6 @@ function M.get(config)
     DiagnosticWarn = { fg = p.yellow },
     DiagnosticInfo = { fg = p.blue },
     DiagnosticHint = { fg = p.teal },
-    -- Underlines use 'undercurl' for a modern, high-end feel
-    DiagnosticUnderlineError = { sp = p.red, style = 'undercurl' },
-    DiagnosticUnderlineWarn = { sp = p.yellow, style = 'undercurl' },
-    DiagnosticUnderlineInfo = { sp = p.blue, style = 'undercurl' },
-    DiagnosticUnderlineHint = { sp = p.teal, style = 'undercurl' },
 
     -- CATEGORY 1: SYNTAX SPECIFICS (Better Contrast)
     Comment = { fg = p.fg_dim, style = styles.italic },
@@ -77,12 +72,12 @@ function M.get(config)
     -- COMPLETION, GITSIGNS, ETC.
     Pmenu = { fg = p.fg, bg = p.none },
     PmenuSel = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    BlinkCmpMenu = { fg = p.fg, bg = p.none },
+    BlinkCmpMenu = { fg = p.white, bg = p.none, style = 'bold' },
     BlinkCmpSel = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    GitSignsAdd = { fg = p.teal },
-    GitSignsChange = { fg = p.yellow },
-    GitSignsDelete = { fg = p.red },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg },
+    GitSignsAdd = { fg = p.teal, style = 'bold' },
+    GitSignsChange = { fg = p.yellow, style = 'bold' },
+    GitSignsDelete = { fg = p.red, style = 'bold' },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
     SagaBorder = { fg = p.blue_deep, bg = p.none },
   }
 
