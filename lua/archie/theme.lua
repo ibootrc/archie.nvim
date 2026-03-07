@@ -85,10 +85,10 @@ function M.get(config)
     NoicePopupBorder = { fg = p.fg, bg = p.none },
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
-    NoiceVirtualText = { bg = p.fg, fg = p.bg_visual, style = 'bold' },
-    NoiceFormatKind = { fg = p.fg_dim, bg = p.bg_float },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
+    NoiceFormatKind = { fg = p.fg_dim, bg = p.none },
     -- test
-    NoiceFormatLevelInfo = { fg = p.blue, bg = p.none },
+    NoiceFormatLevelInfo = { fg = p.fg_dim, bg = p.none },
     NoiceFormatLevelWarn = { fg = p.yellow, bg = p.none },
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
 
@@ -96,7 +96,7 @@ function M.get(config)
     LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
-    LazyH1 = { fg = p.white, bg = p.bg_dark, style = 'bold' },
+    LazyH1 = { fg = p.white, bg = p.bg_visual, style = 'bold' },
     LazyH2 = { fg = p.fg, style = 'bold' },
     -- Buttons & Navigation
     LazyButton = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
