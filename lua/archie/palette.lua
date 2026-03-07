@@ -10,7 +10,7 @@ local M = {
   bg_visual = '#11405A', -- Your specific override
   blue_flash = '#0D3246',
   bg_highlight = '#34393e', -- For CursorLine (subtle)
-  bg_noice = '#11405A',
+  bg_float = '#5C5457',
 
   -- The Greys (Text & UI)
   fg = '#BEB199', -- Your main text (cursor_nr)
