@@ -68,7 +68,6 @@ function M.get(config)
     ['@field'] = { fg = p.blue_glow },
     ['@constructor'] = { fg = p.blue_deep, style = 'bold' },
     ['@keyword.return'] = { fg = p.pink, style = 'bold' },
-    ['@variable.member'] = { fg = p.blue_deep, style = 'bold' },
 
     -- COMPLETION, GITSIGNS, ETC.
     Pmenu = { fg = p.fg, bg = p.none },
@@ -95,7 +94,7 @@ function M.get(config)
     NoiceFormatLevelInfo = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
 
     -- LAZY.NVIM: GLASS UI REWRITE
-    LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
+    LazyNormal = { fg = p.fg, bg = p.bg_highlight }, -- Glass feel (Transparent)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
     LazyH1 = { fg = p.white, bg = p.bg_visual, style = 'bold' },
