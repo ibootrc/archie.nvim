@@ -80,6 +80,7 @@ function M.get(config)
     SagaBorder = { fg = p.fg, bg = p.none },
 
     -- Noice Highlights (Integrated into theme table)
+    NoiceCmdlinePopup = { fg = p.fg, bg = p.bg },
     NoiceCmdlinePopupBorder = { fg = p.fg, bg = p.none },
     NoicePopupBorder = { fg = p.fg, bg = p.none },
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
