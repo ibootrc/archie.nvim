@@ -85,7 +85,7 @@ function M.get(config)
     NoicePopupBorder = { fg = p.fg, bg = p.none },
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
+    NoiceVirtualText = { bg = p.fg, fg = p.bg_visual, style = 'bold' },
     NoiceFormatKind = { fg = p.fg_dim, bg = p.bg_float },
     -- test
     NoiceFormatLevelInfo = { fg = p.blue, bg = p.none },
