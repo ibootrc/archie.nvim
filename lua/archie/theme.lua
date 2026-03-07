@@ -99,7 +99,7 @@ function M.get(config)
     LazyDir = { fg = p.cyan },
     LazyUrl = { fg = p.blue_glow },
     LazyCommit = { fg = p.white },
-    LazyNoice = { fg = p.purple }, -- Specifically for the Noice integration line
+    LazyNoice = { fg = '#1B668F' }, -- Specifically for the Noice integration line
     LazyReasonPlugin = { fg = p.pink },
     LazyReasonSource = { fg = p.teal },
     -- Progress & Task bars
