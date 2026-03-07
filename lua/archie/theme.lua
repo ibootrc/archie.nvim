@@ -18,7 +18,7 @@ function M.get(config)
     Normal = { fg = p.fg, bg = styles.background },
     -- NormalNC (Non-Current) dims the text of inactive windows
     NormalNC = { fg = p.fg_alt, bg = styles.background },
-    NormalFloat = { fg = p.fg, bg = styles.float_background },
+    NormalFloat = { fg = p.white, bg = styles.float_background },
     CursorLine = { bg = p.bg_highlight },
     CursorLineNr = { fg = p.fg, style = 'bold' },
     LineNr = { fg = p.fg_dim },
