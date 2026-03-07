@@ -118,11 +118,11 @@ function M.get(config)
 
     -- MASON.NVIM: Matching Glass UI
     MasonNormal = { fg = p.fg, bg = p.none },
-    MasonHeader = { fg = p.white, bg = p.bg_dark, style = 'bold' },
+    MasonHeader = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     MasonHighlight = { fg = p.fg, bg = p.bg_visual },
     MasonHighlightBlock = { fg = p.fg, bg = p.bg_visual },
-    MasonMuted = { fg = p.fg_alt },
-    MasonMutedBlock = { bg = p.none, fg = p.fg_alt },
+    MasonMuted = { fg = p.fg },
+    MasonMutedBlock = { bg = p.none, fg = p.fg },
 
     -- FIX: Virtual Text (The "Already up to date" Ghost Text)
     -- We use p.fg_alt for a soft, matte gray that looks like a watermark
