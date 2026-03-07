@@ -92,19 +92,21 @@ function M.get(config)
     LazyBorder = { fg = p.fg, bg = p.none }, -- Use your balanced blue
     LazyTitle = { fg = p.white, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
-    LazyButton = { fg = p.white, bg = p.bg.none, style = 'bold' },
+    LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
     LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
     LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
     -- Status Icons & Text
     LazyDir = { fg = p.cyan },
     LazyUrl = { fg = p.blue_glow },
-    LazyCommit = { fg = p.orange },
+    LazyCommit = { fg = p.white },
     LazyNoice = { fg = p.purple }, -- Specifically for the Noice integration line
     LazyReasonPlugin = { fg = p.pink },
     LazyReasonSource = { fg = p.teal },
     -- Progress & Task bars
-    LazyProgressDone = { fg = p.orange, style = 'bold' },
-    LazyProgressTodo = { fg = p.fg_dim },
+    LazyProgressDone = { fg = p.white, style = 'bold' },
+    LazyProgressTodo = { fg = p.white },
+    LazyProp = { fg = p.white },
+    LazySpecial = { fg = p.white },
   }
 
   -- TERMINAL COLORS
