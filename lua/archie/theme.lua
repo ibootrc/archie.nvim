@@ -66,7 +66,7 @@ function M.get(config)
     ['@parameter'] = { fg = p.fg_alt, style = styles.italic },
     ['@property'] = { fg = p.blue_glow },
     ['@field'] = { fg = p.blue_glow },
-    ['@constructor'] = { fg = p.teal, style = 'bold' },
+    ['@constructor'] = { fg = p.blue_deep, style = 'bold' },
     ['@keyword.return'] = { fg = p.pink, style = 'bold' },
 
     -- COMPLETION, GITSIGNS, ETC.
