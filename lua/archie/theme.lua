@@ -100,7 +100,7 @@ function M.get(config)
     LazyH2 = { fg = p.fg, style = 'bold' },
     -- Buttons & Navigation
     LazyButton = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
-    LazyButtonActive = { fg = p.white, bg = p.bg_visual, style = 'bold' },
+    LazyButtonActive = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     -- Plugin Info & Status
     LazyDir = { fg = p.cyan, style = styles.italic },
     LazyUrl = { fg = p.blue_glow },
