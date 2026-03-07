@@ -93,7 +93,7 @@ function M.get(config)
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
 
     -- LAZY.NVIM UI OVERRIDES
-    LazyNormal = { fg = p.fg, bg = p.none }, -- Main window bg
+    LazyNormal = { fg = p.fg, bg = p.bg_noice }, -- Main window bg
     --LazyBorder = { fg = p.fg, bg = p.none },
     --LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
