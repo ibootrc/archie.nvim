@@ -4,12 +4,26 @@ local bg_base = '#232629' -- Your Noice/Terminal background
 local M = {
   -- Core UI (The Foundation)
 
+  --- Variantes de #1B668F (Faint / Estompé) ---
+
+  --Original (Référence) : #1B668F
+  --Plus marqué (70%)     : #134764
+  --Équilibré (50%)      : #0E3348  <-- Recommandé pour fond transparent
+  --Discret (30%)        : #081F2B
+  --Désaturé (Moins vif) : #2B5266
+
+  --[ REFERENCE ]  #0E3348  (Deepest / Dark Background)
+  --[ SUBTLE    ]  #0D3246  (Low-contrast / Block Selection)
+  --[ MID-TONE  ]  #154E6D  (Standard Active / Balanced)
+  --[ BASE      ]  #1B668F  (Your original color)
+  --[ STAND-OUT ]  #2488BE  (High-visibility / Search Highlight)
+
   none = 'NONE',
   bg = 'NONE', -- Transparent as requested
   bg_dark = bg_base, -- For Noice/Statusline
   bg_panel = '#2a2e32', -- Slightly lighter for floating windows
-  bg_visual = '#454a4e', -- Your specific override
-  blue_flash = '#01D8DD',
+  bg_visual = '#0E3348', -- Your specific override
+  blue_flash = '#2488BE',
   bg_highlight = '#34393e', -- For CursorLine (subtle)
 
   -- The Greys (Text & UI)
