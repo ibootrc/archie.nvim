@@ -114,6 +114,7 @@ function M.get(config)
     -- Progress Bars (Premium Look)
     LazyProgressDone = { fg = p.blue_glow, bg = p.none, style = 'bold' },
     LazyProgressTodo = { fg = p.bg_highlight, bg = p.none },
+    LazyDimmed = { fg = p.fg_alt },
 
     -- MASON.NVIM: Matching Glass UI
     MasonNormal = { fg = p.fg, bg = p.none },
