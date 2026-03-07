@@ -19,7 +19,8 @@ local M = {
   white = '#CCCCCC',
 
   -- The Blue Seed (#1D99F3) & its variants
-  blue = '#1D99F3', -- Primary Accent
+
+  blue = '#0D3246', -- Primary Accent
   blue_glow = '#89DDFF', -- Brighter (for Booleans/Strings)
   blue_deep = '#1B668F', -- Muted (for Search/Functions)
 
