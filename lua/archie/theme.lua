@@ -98,7 +98,7 @@ function M.get(config)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
     LazyH1 = { fg = p.white, bg = p.bg_visual, style = 'bold' },
-    LazyH2 = { fg = p.fg, style = 'bold' },
+    LazyH2 = { fg = p.fg, bg = p.none, style = 'bold' },
     -- Buttons & Navigation
     LazyButton = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
     LazyButtonActive = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
@@ -110,12 +110,11 @@ function M.get(config)
     LazySpecial = { fg = p.pink },
     LazyReasonPlugin = { fg = p.pink },
     LazyReasonSource = { fg = p.fg_alt },
-    LazyComment = { fg = p.fg_dim },
+    LazyComment = { fg = p.fg_dim, bg = p.none, style = 'bold' },
 
     -- Progress Bars (Premium Look)
     LazyProgressDone = { fg = p.blue_glow, bg = p.none, style = 'bold' },
     LazyProgressTodo = { fg = p.bg_highlight, bg = p.none },
-    LazyDimmed = { fg = p.fg_alt },
 
     -- MASON.NVIM: Matching Glass UI
     MasonNormal = { fg = p.fg, bg = p.none },
@@ -123,7 +122,7 @@ function M.get(config)
     MasonHighlight = { fg = p.fg, bg = p.bg_visual },
     MasonHighlightBlock = { fg = p.fg, bg = p.bg_visual },
     MasonMuted = { fg = p.fg },
-    MasonMutedBlock = { bg = p.none, fg = p.fg },
+    MasonMutedBlock = { bg = p.bg_highlight, fg = p.fg },
 
     -- FIX: Virtual Text (The "Already up to date" Ghost Text)
     -- We use p.fg_alt for a soft, matte gray that looks like a watermark
