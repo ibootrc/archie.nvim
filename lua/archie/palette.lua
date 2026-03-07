@@ -8,7 +8,7 @@ local M = {
   bg = 'NONE', -- Transparent as requested
   bg_dark = bg_base, -- For Noice/Statusline
   bg_panel = '#2a2e32', -- Slightly lighter for floating windows
-  bg_visual = '#89DDFF', -- Your specific override
+  bg_visual = '#454a4e', -- Your specific override
   blue_flash = '#01D8DD',
   bg_highlight = '#34393e', -- For CursorLine (subtle)
 
