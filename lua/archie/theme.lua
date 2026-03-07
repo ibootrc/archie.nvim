@@ -80,11 +80,11 @@ function M.get(config)
     SagaBorder = { fg = p.fg, bg = p.none },
 
 -- Balanced blue for borders:
-NoiceCmdlinePopupBorder = { fg = "#BEB199", bg = p.none },
-NoicePopupBorder        = { fg = "#BEB199", bg = p.none },
-NoiceConfirmBorder      = { fg = "#BEB199", bg = p.none },
-NoiceLspDocBorder       = { fg = "#BEB199", bg = p.none }, 
-NoiceVirtualText        = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
+NoiceCmdlinePopupBorder = { fg = p.fg, bg = p.none },
+NoicePopupBorder = { fg = p.fg, bg = p.none },
+NoiceConfirmBorder = { fg = p.fg, bg = p.none },
+NoiceLspDocBorder = { fg = p.fg, bg = p.none },
+NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
 
   -- TERMINAL COLORS
   vim.g.terminal_color_0 = p.bg_dark
