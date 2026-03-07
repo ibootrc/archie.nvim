@@ -92,28 +92,40 @@ function M.get(config)
     NoiceFormatLevelWarn = { fg = p.yellow, bg = p.none },
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
 
-    -- LAZY.NVIM UI OVERRIDES
-    LazyNormal = { fg = p.fg, bg = p.bg_float }, -- Main window bg
-    --LazyBorder = { fg = p.fg, bg = p.none },
-    --LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
-    -- Buttons & Selection
-    --LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
-    --LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
-    --LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
-    -- Status Icons & Text
-    LazyDir = { fg = p.cyan },
+    -- LAZY.NVIM: GLASS UI REWRITE
+    LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
+    LazyBorder = { fg = p.border, bg = p.none },
+    -- The "Top Bar" / Headers (Dark & Solid)
+    LazyH1 = { fg = p.white, bg = p.bg_dark, style = 'bold' },
+    LazyH2 = { fg = p.fg, style = 'bold' },
+    -- Buttons & Navigation
+    LazyButton = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
+    LazyButtonActive = { fg = p.white, bg = p.bg_visual, style = 'bold' },
+    -- Plugin Info & Status
+    LazyDir = { fg = p.cyan, style = styles.italic },
     LazyUrl = { fg = p.blue_glow },
-    LazyCommit = { fg = p.white },
+    LazyCommit = { fg = p.orange },
+    LazyProp = { fg = p.teal },
+    LazySpecial = { fg = p.pink },
     LazyReasonPlugin = { fg = p.pink },
-    LazyReasonSource = { fg = p.pink },
-    -- Progress & Task bars
-    LazyProgressDone = { fg = p.orange, style = 'bold' },
-    LazyProgressTodo = { fg = p.orange },
-    LazyProp = { fg = p.white },
-    LazyComment = { fg = fg_dim },
-    -- The "ghost" parameters for Lazy's virtual text info
-    NonText = { fg = p.orange }, -- Lazy uses this for "Already up to date"
-    Conceal = { fg = p.white, bg = p.none }, -- If it's being hidden/replaced
+    LazyReasonSource = { fg = p.fg_alt },
+    LazyComment = { fg = p.fg_dim },
+
+    -- Progress Bars (Premium Look)
+    LazyProgressDone = { fg = p.blue_glow, bg = p.none, style = 'bold' },
+    LazyProgressTodo = { fg = p.bg_highlight, bg = p.none },
+
+    -- MASON.NVIM: Matching Glass UI
+    MasonNormal = { fg = p.fg, bg = p.none },
+    MasonHeader = { fg = p.white, bg = p.bg_dark, style = 'bold' },
+    MasonHighlight = { fg = p.fg, bg = p.bg_visual },
+    MasonHighlightBlock = { fg = p.fg, bg = p.bg_visual },
+    MasonMuted = { fg = p.fg_alt },
+    MasonMutedBlock = { bg = p.none, fg = p.fg_alt },
+
+    -- FIX: Virtual Text (The "Already up to date" Ghost Text)
+    -- We use p.fg_alt for a soft, matte gray that looks like a watermark
+    NonText = { fg = p.fg_alt, bg = p.none },
   }
 
   -- TERMINAL COLORS
