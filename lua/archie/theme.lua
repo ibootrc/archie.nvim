@@ -92,25 +92,27 @@ function M.get(config)
     LazyBorder = { fg = p.fg, bg = p.none },
     LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
-    LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
-    LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
+    --LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
+    --LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
     --LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
     -- Status Icons & Text
     LazyDir = { fg = p.cyan },
     LazyUrl = { fg = p.blue_glow },
     LazyCommit = { fg = p.white },
-    --LazyNoice = { fg = '#87757C' }, -- Specifically for the Noice integration line
     LazyReasonPlugin = { fg = p.pink },
-    LazyReasonSource = { fg = p.teal },
+    LazyReasonSource = { fg = p.pink },
     -- Progress & Task bars
     LazyProgressDone = { fg = p.orange, style = 'bold' },
     LazyProgressTodo = { fg = p.orange },
     LazyProp = { fg = p.white },
     LazyComment = { fg = '#87757C' },
     -- The "ghost" parameters for Lazy's virtual text info
-    LazyNoice = { fg = '#87757C' }, -- Only if noice integration is active
     NonText = { fg = p.orange }, -- Lazy uses this for "Already up to date"
     Conceal = { fg = p.white, bg = p.none }, -- If it's being hidden/replaced
+
+    NoiceFormatProgressDone = { fg = p.fg_dim, style = 'bold' },
+    NoiceFormatProgressTodo = { fg = p.fg_dim },
+    NoiceFormatTitle = { fg = p.white, style = 'bold' },
   }
 
   -- TERMINAL COLORS
