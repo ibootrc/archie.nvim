@@ -87,6 +87,10 @@ function M.get(config)
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
     NoiceFormatKind = { fg = p.fg_dim },
+    -- test
+    NoiceFormatLevelInfo = { fg = p.blue, bg = p.none },
+    NoiceFormatLevelWarn = { fg = p.yellow, bg = p.none },
+    NoiceFormatLevelError = { fg = p.red, bg = p.none },
 
     -- LAZY.NVIM UI OVERRIDES
     LazyNormal = { fg = p.fg, bg = p.none }, -- Main window bg
