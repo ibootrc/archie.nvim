@@ -22,7 +22,7 @@ function M.get(config)
     CursorLine = { bg = p.bg_highlight },
     CursorLineNr = { fg = p.fg, style = 'bold' },
     LineNr = { fg = p.fg_dim },
-    FloatBorder = { fg = p.blue_deep, bg = p.none },
+    FloatBorder = { fg = p.fg, bg = p.none },
     FloatTitle = { fg = p.blue, style = 'bold' },
     ColorColumn = { bg = p.bg_highlight },
     SignColumn = { fg = p.fg, bg = p.none },
@@ -78,7 +78,7 @@ function M.get(config)
     GitSignsChange = { fg = p.yellow, style = 'bold' },
     GitSignsDelete = { fg = p.red, style = 'bold' },
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
-    SagaBorder = { fg = p.blue_deep, bg = p.none },
+    SagaBorder = { fg = p.fg, bg = p.none },
   }
 
   -- TERMINAL COLORS
