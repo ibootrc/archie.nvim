@@ -77,9 +77,14 @@ function M.get(config)
     GitSignsAdd = { fg = p.teal, style = 'bold' },
     GitSignsChange = { fg = p.yellow, style = 'bold' },
     GitSignsDelete = { fg = p.red, style = 'bold' },
-    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
     SagaBorder = { fg = p.fg, bg = p.none },
-  }
+
+-- Balanced blue for borders:
+NoiceCmdlinePopupBorder = { fg = "#BEB199", bg = p.none },
+NoicePopupBorder        = { fg = "#BEB199", bg = p.none },
+NoiceConfirmBorder      = { fg = "#BEB199", bg = p.none },
+NoiceLspDocBorder       = { fg = "#BEB199", bg = p.none }, 
+NoiceVirtualText        = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
 
   -- TERMINAL COLORS
   vim.g.terminal_color_0 = p.bg_dark
