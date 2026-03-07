@@ -16,7 +16,6 @@ function M.get(config)
   theme = {
     -- CORE UI & CATEGORY 4: INACTIVE DIMMING
     Normal = { fg = p.fg, bg = styles.background },
-    -- NormalNC (Non-Current) dims the text of inactive windows
     NormalNC = { fg = p.fg_alt, bg = styles.background },
     NormalFloat = { fg = p.white, bg = styles.float_background },
     CursorLine = { bg = p.bg_highlight },
@@ -41,30 +40,30 @@ function M.get(config)
     TelescopeMatching = { fg = p.cyan, style = 'bold' },
     TelescopePromptPrefix = { fg = p.blue_deep, style = 'bold' },
 
-    -- CATEGORY 2: DIAGNOSTICS (Underlines & Signs)
+    -- CATEGORY 2: DIAGNOSTICS
     DiagnosticError = { fg = p.red },
     DiagnosticWarn = { fg = p.yellow },
     DiagnosticInfo = { fg = p.blue },
     DiagnosticHint = { fg = p.teal },
 
-    -- CATEGORY 1: SYNTAX SPECIFICS (Better Contrast)
+    -- CATEGORY 1: SYNTAX SPECIFICS
     Comment = { fg = p.fg_dim, style = styles.italic },
     Constant = { fg = p.orange },
     String = { fg = p.cyan },
     Character = { fg = p.pink },
     Number = { fg = p.orange },
     Boolean = { fg = p.orange },
-    Identifier = { fg = p.white }, -- Variable declarations pop more
+    Identifier = { fg = p.white },
     Function = { fg = p.blue_glow, style = 'bold' },
     Statement = { fg = p.purple },
     Keyword = { fg = p.pink },
     Type = { fg = p.teal },
 
     -- Treesitter Specifics
-    ['@variable'] = { fg = p.fg }, -- Standard variables
-    ['@variable.builtin'] = { fg = p.blue_glow }, -- 'self', 'this', etc.
-    ['@parameter'] = { fg = p.fg_alt, style = styles.italic }, -- Parameters are distinct
-    ['@property'] = { fg = p.blue_glow }, -- Object properties
+    ['@variable'] = { fg = p.fg },
+    ['@variable.builtin'] = { fg = p.blue_glow },
+    ['@parameter'] = { fg = p.fg_alt, style = styles.italic },
+    ['@property'] = { fg = p.blue_glow },
     ['@field'] = { fg = p.blue_glow },
     ['@constructor'] = { fg = p.teal, style = 'bold' },
     ['@keyword.return'] = { fg = p.pink, style = 'bold' },
@@ -79,13 +78,13 @@ function M.get(config)
     GitSignsDelete = { fg = p.red, style = 'bold' },
     SagaBorder = { fg = p.fg, bg = p.none },
 
--- Balanced blue for borders:
-NoiceCmdlinePopupBorder = { fg = p.fg, bg = p.none },
-NoicePopupBorder = { fg = p.fg, bg = p.none },
-NoiceConfirmBorder = { fg = p.fg, bg = p.none },
-NoiceLspDocBorder = { fg = p.fg, bg = p.none },
-NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
-	},
+    -- Noice Highlights (Integrated into theme table)
+    NoiceCmdlinePopupBorder = { fg = p.fg, bg = p.none },
+    NoicePopupBorder = { fg = p.fg, bg = p.none },
+    NoiceConfirmBorder = { fg = p.fg, bg = p.none },
+    NoiceLspDocBorder = { fg = p.fg, bg = p.none },
+    NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
+  }
 
   -- TERMINAL COLORS
   vim.g.terminal_color_0 = p.bg_dark
