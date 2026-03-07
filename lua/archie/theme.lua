@@ -86,26 +86,6 @@ function M.get(config)
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
-
-    -- LAZY.NVIM UI OVERRIDES
-    LazyNormal = { fg = p.fg, bg = styles.float_background }, -- Main window bg
-    LazyBorder = { fg = '#1B668F', bg = p.none }, -- Use your balanced blue
-    LazyTitle = { fg = p.white, style = 'bold' }, -- Titles at the top
-    -- Buttons & Selection
-    LazyButton = { fg = p.white, bg = p.bg_highlight },
-    LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
-    LazyH1 = { fg = p.white, bg = '#1B668F', style = 'bold' }, -- Section headers
-    -- Status Icons & Text
-    LazyDir = { fg = p.cyan },
-    LazyUrl = { fg = p.blue_glow },
-    LazyCommit = { fg = p.orange },
-    LazyNoice = { fg = p.purple }, -- Specifically for the Noice integration line
-    LazyReasonPlugin = { fg = p.pink },
-    LazyReasonSource = { fg = p.teal },
-
-    -- Progress & Task bars
-    LazyProgressDone = { fg = '#1B668F', style = 'bold' },
-    LazyProgressTodo = { fg = p.fg_dim },
   }
 
   -- TERMINAL COLORS
