@@ -16,8 +16,8 @@ function M.get(config)
   theme = {
     -- CORE UI & CATEGORY 4: INACTIVE DIMMING
     Normal = { fg = p.fg, bg = styles.background },
-    NormalNC = { fg = p.fg_alt, bg = styles.background },
-    NormalFloat = { fg = p.white, bg = styles.float_background },
+    NormalNC = { fg = p.fg, bg = styles.background },
+    NormalFloat = { fg = p.fg, bg = styles.float_background },
     CursorLine = { bg = p.bg_highlight },
     CursorLineNr = { fg = p.fg, style = 'bold' },
     LineNr = { fg = p.fg_dim },
@@ -80,17 +80,18 @@ function M.get(config)
     SagaBorder = { fg = p.fg, bg = p.none },
 
     -- Noice Highlights (Integrated into theme table)
-    NoiceCmdlinePopup = { fg = '#11405A', bg = p.bg },
+    NoiceCmdlinePopup = { fg = p.fg, bg = p.none },
     NoiceCmdlinePopupBorder = { fg = p.fg, bg = p.none },
     NoicePopupBorder = { fg = p.fg, bg = p.none },
     NoiceConfirmBorder = { fg = p.fg, bg = p.none },
     NoiceLspDocBorder = { fg = p.fg, bg = p.none },
     NoiceVirtualText = { bg = p.bg_visual, fg = p.fg, style = 'bold' },
+    NoiceFormatKind = { fg = p.fg_dim },
 
     -- LAZY.NVIM UI OVERRIDES
     LazyNormal = { fg = p.fg, bg = p.none }, -- Main window bg
-    LazyBorder = { fg = p.fg, bg = p.none },
-    LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
+    --LazyBorder = { fg = p.fg, bg = p.none },
+    --LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
     --LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
     --LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
@@ -109,10 +110,6 @@ function M.get(config)
     -- The "ghost" parameters for Lazy's virtual text info
     NonText = { fg = p.orange }, -- Lazy uses this for "Already up to date"
     Conceal = { fg = p.white, bg = p.none }, -- If it's being hidden/replaced
-
-    NoiceFormatProgressDone = { fg = p.fg_dim, style = 'bold' },
-    NoiceFormatProgressTodo = { fg = p.fg_dim },
-    NoiceFormatTitle = { fg = p.white, style = 'bold' },
   }
 
   -- TERMINAL COLORS
