@@ -90,7 +90,7 @@ function M.get(config)
     -- LAZY.NVIM UI OVERRIDES
     LazyNormal = { fg = p.fg, bg = p.none }, -- Main window bg
     LazyBorder = { fg = p.fg, bg = p.none },
-    LazyTitle = { fg = p.white, style = 'bold' }, -- Titles at the top
+    LazyTitle = { fg = p.fg, style = 'bold' }, -- Titles at the top
     -- Buttons & Selection
     LazyButton = { fg = p.white, bg = p.none, style = 'bold' },
     LazyButtonActive = { fg = p.white, bg = '#1B668F', style = 'bold' },
@@ -99,12 +99,12 @@ function M.get(config)
     LazyDir = { fg = p.cyan },
     LazyUrl = { fg = p.blue_glow },
     LazyCommit = { fg = p.white },
-    LazyNoice = { fg = '#1B668F' }, -- Specifically for the Noice integration line
+    LazyNoice = { fg = '#87757C' }, -- Specifically for the Noice integration line
     LazyReasonPlugin = { fg = p.pink },
     LazyReasonSource = { fg = p.teal },
     -- Progress & Task bars
-    LazyProgressDone = { fg = p.white, style = 'bold' },
-    LazyProgressTodo = { fg = p.white },
+    LazyProgressDone = { fg = p.orange, style = 'bold' },
+    LazyProgressTodo = { fg = p.orange },
     LazyProp = { fg = p.white },
     LazyComment = { fg = p.white },
     LazySpecial = { fg = p.white },
