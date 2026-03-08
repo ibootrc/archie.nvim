@@ -33,7 +33,7 @@ local M = {
   pink = '#D17B9A', -- From Lualine (Keywords)
   purple = '#7060EB', -- From Lualine (Statements)
   red = '#D0679D', -- For Errors
-  yellow = '#F7B267', -- Actual Yellow for Warnings
+  yellow = '#EBCB8B', -- Actual Yellow for Warnings
   green = '#A3BE8C', -- Actual Green for Git Add
 }
 
