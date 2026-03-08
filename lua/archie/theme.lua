@@ -107,8 +107,8 @@ function M.get(config)
     LazyUrl = { fg = p.blue_glow },
     LazyCommit = { fg = p.blue_glow },
     LazyProp = { fg = p.teal },
-    LazySpecial = { fg = p.pink },
-    LazyReasonPlugin = { fg = p.pink },
+    LazySpecial = { fg = p.blue_glow },
+    LazyReasonPlugin = { fg = p.blue_glow },
     LazyReasonSource = { fg = p.fg_alt },
     LazyComment = { fg = p.fg_dim, bg = p.none, style = 'bold' },
 
