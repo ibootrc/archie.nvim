@@ -48,7 +48,7 @@ function M.get(config)
     DiagnosticHint = { fg = p.white },
 
     -- TEST
-    SpecialKey = { fg = p.white },
+    SpecialKey = { fg = p.cyan },
 
     -- CATEGORY 1: SYNTAX SPECIFICS
     Comment = { fg = p.white, style = styles.italic },
