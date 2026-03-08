@@ -126,7 +126,7 @@ function M.get(config)
     MasonBorder = { fg = p.bg_highlight, bg = p.none },
     -- FIX: Virtual Text (The "Already up to date" Ghost Text)
     -- We use p.fg_alt for a soft, matte gray that looks like a watermark
-    NonText = { fg = p.fg_alt, bg = p.none },
+    NonText = { fg = p.white, bg = p.none },
   }
 
   -- TERMINAL COLORS
