@@ -105,7 +105,7 @@ function M.get(config)
     -- Plugin Info & Status
     LazyDir = { fg = p.cyan, style = styles.italic },
     LazyUrl = { fg = p.blue_glow },
-    LazyCommit = { fg = p.blue_glow },
+    LazyCommit = { fg = p.orange },
     LazyProp = { fg = p.teal },
     LazySpecial = { fg = p.pink },
     LazyReasonPlugin = { fg = p.pink },
