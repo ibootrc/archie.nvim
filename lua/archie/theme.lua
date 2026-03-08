@@ -95,6 +95,7 @@ function M.get(config)
     NoiceFormatLevelError = { fg = p.red, bg = p.none },
     NoiceFormatMessage = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     NoiceFormatLevelInfo = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
+    EndOfBuffer = { fg = p.cyan },
 
     -- oLAZY.NVIM: GLASS UI REWRITE
     LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
