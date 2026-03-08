@@ -38,21 +38,3 @@ local M = {
 }
 
 return M
-
---- Variantes de #1B668F (Faint / Estompé) ---
-
---[ REFERENCE ]    #0E3348  (Deepest / Dark Background)
---[ SUBTLE    ]    #0D3246  (Low-contrast / Block Selection)
---[ MID-TONE  ]    #154E6D  (Standard Active / Balanced)
---[ BASE      ]    #1B668F  (Your original color)
---[ STAND-OUT ]    #2488BE  (High-visibility / Search Highlight)
---[ DUSK BLUE   ]  #11405A  (A desaturated, soft version of your base)
---[ BASE MATTE  ]  #1B668F  (Your original color)
---[ STEEL LIGHT ]  #3C7A9B  (Muted foreground for secondary text)
---[ FROSTED     ]  #6B9CB5  (Very soft; looks like "faint" blue text)
-
---[ PURE WHITE  ]  #FFFFFF  (The "blinding" original)
---[ CLOUD       ]  #E6E6E6  (90% Brightness - The standard "comfortable" white)
---[ NICKEL      ]  #CCCCCC  (80% Brightness - Matte finish; looks professional)
---[ CONCRETE    ]  #B3B3B3  (70% Brightness - Great for non-essential info)
---[ CHARCOAL    ]  #4D4D4D  (30% Brightness - Deep UI borders)
