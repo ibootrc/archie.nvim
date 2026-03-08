@@ -44,7 +44,7 @@ function M.get(config)
     -- CATEGORY 2: DIAGNOSTICS
     DiagnosticError = { fg = p.red },
     DiagnosticWarn = { fg = p.yellow },
-    DiagnosticInfo = { fg = p.blue },
+    DiagnosticInfo = { fg = p.fg },
     DiagnosticHint = { fg = p.teal },
 
     -- CATEGORY 1: SYNTAX SPECIFICS
@@ -93,7 +93,7 @@ function M.get(config)
     NoiceFormatMessage = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     NoiceFormatLevelInfo = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
 
-    -- LAZY.NVIM: GLASS UI REWRITE
+    -- oLAZY.NVIM: GLASS UI REWRITE
     LazyNormal = { fg = p.fg, bg = p.bg_highlight }, -- Glass feel (Transparent)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
