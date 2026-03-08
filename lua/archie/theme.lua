@@ -44,7 +44,7 @@ function M.get(config)
     -- CATEGORY 2: DIAGNOSTICS
     DiagnosticError = { fg = p.red },
     DiagnosticWarn = { fg = p.yellow },
-    DiagnosticInfo = { fg = p.fg_dark },
+    DiagnosticInfo = { fg = p.fg_dim, style = 'bold' },
     DiagnosticHint = { fg = p.teal },
 
     -- CATEGORY 1: SYNTAX SPECIFICS
