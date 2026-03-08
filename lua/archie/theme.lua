@@ -94,7 +94,7 @@ function M.get(config)
     NoiceFormatLevelInfo = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
 
     -- oLAZY.NVIM: GLASS UI REWRITE
-    LazyNormal = { fg = p.fg, bg = p.bg_highlight }, -- Glass feel (Transparent)
+    LazyNormal = { fg = p.fg, bg = p.none }, -- Glass feel (Transparent)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
     LazyH1 = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
@@ -104,8 +104,8 @@ function M.get(config)
     LazyButtonActive = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     -- Plugin Info & Status
     LazyDir = { fg = p.cyan, style = styles.italic },
-    LazyUrl = { fg = p.blue_glow },
-    LazyCommit = { fg = p.blue_glow },
+    LazyUrl = { fg = p.cyan },
+    LazyCommit = { fg = p.cyan },
     LazyProp = { fg = p.cyan },
     LazySpecial = { fg = p.pink },
     LazyReasonPlugin = { fg = p.blue_glow },
@@ -113,7 +113,7 @@ function M.get(config)
     LazyComment = { fg = p.pink, bg = p.none, style = 'bold' },
 
     -- Progress Bars (Premium Look)
-    LazyProgressDone = { fg = p.blue_glow, bg = p.none, style = 'bold' },
+    LazyProgressDone = { fg = p.cyan, bg = p.none, style = 'bold' },
     LazyProgressTodo = { fg = p.bg_highlight, bg = p.none },
 
     -- MASON.NVIM: Matching Glass UI
