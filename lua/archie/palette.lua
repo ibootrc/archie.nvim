@@ -16,6 +16,7 @@ local M = {
   fg = '#BEB199', -- Your main text (cursor_nr)
   fg_dim = '#87757C', -- Your grey1 (LineNr)
   fg_alt = '#5C5457', -- Your grey (Inactive text)
+  fg_dark = '#34393e',
   border = '#454a4e', -- Subtle UI borders
   white = '#CCCCCC',
 
