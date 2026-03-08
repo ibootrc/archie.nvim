@@ -44,7 +44,7 @@ function M.get(config)
     -- CATEGORY 2: DIAGNOSTICS
     DiagnosticError = { fg = p.red },
     DiagnosticWarn = { fg = p.yellow },
-    DiagnosticInfo = { fg = p.cyan, style = 'bold' },
+    DiagnosticInfo = { fg = p.fg_dark, style = 'bold' },
     DiagnosticHint = { fg = p.teal },
 
     -- CATEGORY 1: SYNTAX SPECIFICS
@@ -108,7 +108,7 @@ function M.get(config)
     LazyCommit = { fg = p.cyan },
     LazyProp = { fg = p.cyan },
     LazySpecial = { fg = p.pink },
-    LazyReasonPlugin = { fg = p.blue_glow },
+    LazyReasonPlugin = { fg = p.cyan },
     LazyReasonSource = { fg = p.pink },
     LazyComment = { fg = p.pink, bg = p.none, style = 'bold' },
 
