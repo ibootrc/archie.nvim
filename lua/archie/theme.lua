@@ -97,7 +97,7 @@ function M.get(config)
     LazyNormal = { fg = p.fg, bg = p.bg_highlight }, -- Glass feel (Transparent)
     LazyBorder = { fg = p.border, bg = p.none },
     -- The "Top Bar" / Headers (Dark & Solid)
-    LazyH1 = { fg = p.white, bg = p.bg_visual, style = 'bold' },
+    LazyH1 = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
     LazyH2 = { fg = p.fg, bg = p.none, style = 'bold' },
     -- Buttons & Navigation
     LazyButton = { fg = p.white, bg = p.bg_highlight, style = 'bold' },
@@ -107,10 +107,10 @@ function M.get(config)
     LazyUrl = { fg = p.blue_glow },
     LazyCommit = { fg = p.blue_glow },
     LazyProp = { fg = p.teal },
-    LazySpecial = { fg = p.blue_glow },
+    LazySpecial = { fg = p.pink },
     LazyReasonPlugin = { fg = p.blue_glow },
-    LazyReasonSource = { fg = p.fg_alt },
-    LazyComment = { fg = p.fg_dim, bg = p.none, style = 'bold' },
+    LazyReasonSource = { fg = p.pink },
+    LazyComment = { fg = p.pink, bg = p.none, style = 'bold' },
 
     -- Progress Bars (Premium Look)
     LazyProgressDone = { fg = p.blue_glow, bg = p.none, style = 'bold' },
