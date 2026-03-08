@@ -24,7 +24,7 @@ function M.get(config)
     FloatBorder = { fg = p.fg, bg = p.none },
     FloatTitle = { fg = p.blue, style = 'bold' },
     ColorColumn = { bg = p.bg_highlight },
-    SignColumn = { fg = p.fg, bg = p.none },
+    SignColumn = { fg = p.orange, bg = p.none },
     VertSplit = { fg = p.border, bg = styles.vert_split },
 
     -- SELECTION & SEARCH
