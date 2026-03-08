@@ -47,6 +47,9 @@ function M.get(config)
     DiagnosticInfo = { fg = p.white, style = 'bold' },
     DiagnosticHint = { fg = p.white },
 
+    -- TEST
+    SpecialKey = { fg = p.white },
+
     -- CATEGORY 1: SYNTAX SPECIFICS
     Comment = { fg = p.white, style = styles.italic },
     Constant = { fg = p.orange },
