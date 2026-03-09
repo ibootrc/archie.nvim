@@ -51,7 +51,7 @@ function M.get(config)
     SpecialKey = { fg = p.cyan },
 
     -- CATEGORY 1: SYNTAX SPECIFICS
-    Comment = { fg = p.white, style = styles.italic },
+    Comment = { fg = p.fg_dim, style = styles.italic },
     Constant = { fg = p.orange },
     String = { fg = p.cyan },
     Character = { fg = p.pink },
