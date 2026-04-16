@@ -30,9 +30,9 @@ function M.get(config)
     -- SELECTION & SEARCH
     Visual = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
     Search = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
-    YankHighlight = { fg = p.fg, bg = p.blue, style = 'bold' },
-    IncSearch = { fg = p.fg, bg = p.blue, style = 'bold' },
-    CurSearch = { fg = p.fg, bg = p.blue, style = 'bold' },
+    YankHighlight = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
+    IncSearch = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
+    CurSearch = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
 
     -- TELESCOPE & PLUGINS
     TelescopeNormal = { fg = p.fg, bg = p.none, style = 'bold' },
