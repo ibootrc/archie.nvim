@@ -28,7 +28,7 @@ function M.get(config)
     VertSplit = { fg = p.border, bg = styles.vert_split },
 
     -- SELECTION & SEARCH
-    Visual = { fg = p.fg, bg = p.bg_visual, style = 'bold' },
+    Visual = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
     Search = { fg = p.cyan, bg = p.blue_deep, style = 'bold' },
     YankHighlight = { fg = p.fg, bg = p.blue, style = 'bold' },
     IncSearch = { fg = p.fg, bg = p.blue, style = 'bold' },
